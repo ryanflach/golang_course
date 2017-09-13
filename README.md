@@ -1,0 +1,1 @@
+Finished and in-progress exercises and assignments from an on-line course on Go.
