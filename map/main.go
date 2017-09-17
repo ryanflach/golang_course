@@ -3,11 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	// All keys are strings; all values are strings
-	colors := map[string]string{
-		"red":   "#ff0000",
-		"green": "#00ff00",
-	}
+	// alt syntax
+	// var colors map[int]string
+
+	colors := make(map[int]string)
+
+	colors[10] = "#ffffff"
+
+	delete(colors, 10)
 
 	fmt.Println(colors)
 }
