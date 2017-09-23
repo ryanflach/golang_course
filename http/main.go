@@ -1,8 +1,11 @@
 package main
 
-import "net/http"
-import "fmt"
-import "os"
+import (
+	"fmt"
+	"io"
+	"net/http"
+	"os"
+)
 
 func main() {
 	r, e := http.Get("http://www.google.com")
@@ -12,7 +15,5 @@ func main() {
 		os.Exit(1)
 	}
 
-	bs := make([]byte, 99999)
-	r.Body.Read(bs)
-	fmt.Println(string(bs))
+	io.Copy(os.Stdout, r.Body)
 }
