@@ -1,1 +1,1 @@
-Finished and in-progress exercises and assignments from an on-line course on Go.
+Exercises and assignments from Stephen Grider's on-line course on Go.
